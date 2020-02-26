@@ -29,18 +29,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if emailTextField.text! == registeredUserEmail &&
                 passTextField.text! == registeredUserPass
             {
-                showAlert(withMessage: "Добро пожаловать \(emailTextField.text!)")
+                performSegue(withIdentifier: "goToMainScreen", sender: self)
             }
             else {
-                showAlert(withMessage: "Неправильный логин или пароль")
+                performSegue(withIdentifier: "goToErrorScreen", sender: self)
             }
         }
         else {
             if passTextField.text! == passRepeatTextField.text! {
-                showAlert(withMessage: "Добро пожаловать \(emailTextField.text!)")
+                performSegue(withIdentifier: "goToMainScreen", sender: self)
             }
             else {
-                showAlert(withMessage: "Пароли не совпадают")
+                performSegue(withIdentifier: "goToErrorScreen", sender: self)
             }
         }
     }
@@ -109,6 +109,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let alert = UIAlertController(title: withMessage, message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ладно", style: .cancel, handler: nil))
         present(alert, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? MainViewController {
+            vc.email = emailTextField.text!
+        }
     }
 }
 

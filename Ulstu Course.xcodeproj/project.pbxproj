@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A2DD77824056262004FB575 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DD77724056262004FB575 /* MainViewController.swift */; };
+		5A2DD77A24056297004FB575 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DD77924056297004FB575 /* ErrorViewController.swift */; };
 		5A4EBDC323FADE9100A9EC23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4EBDC223FADE9100A9EC23 /* AppDelegate.swift */; };
 		5A4EBDC723FADE9100A9EC23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4EBDC623FADE9100A9EC23 /* ViewController.swift */; };
 		5A4EBDCA23FADE9100A9EC23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4EBDC823FADE9100A9EC23 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A2DD77724056262004FB575 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5A2DD77924056297004FB575 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		5A4EBDBF23FADE9000A9EC23 /* Ulstu Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ulstu Course.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4EBDC223FADE9100A9EC23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A4EBDC623FADE9100A9EC23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				5A4EBDCB23FADE9300A9EC23 /* Assets.xcassets */,
 				5A4EBDCD23FADE9300A9EC23 /* LaunchScreen.storyboard */,
 				5A4EBDD023FADE9300A9EC23 /* Info.plist */,
+				5A2DD77724056262004FB575 /* MainViewController.swift */,
+				5A2DD77924056297004FB575 /* ErrorViewController.swift */,
 			);
 			path = "Ulstu Course";
 			sourceTree = "<group>";
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2DD77824056262004FB575 /* MainViewController.swift in Sources */,
+				5A2DD77A24056297004FB575 /* ErrorViewController.swift in Sources */,
 				5A4EBDC723FADE9100A9EC23 /* ViewController.swift in Sources */,
 				5A4EBDC323FADE9100A9EC23 /* AppDelegate.swift in Sources */,
 			);
