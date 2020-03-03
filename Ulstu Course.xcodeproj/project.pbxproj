@@ -14,6 +14,9 @@
 		5A4EBDCA23FADE9100A9EC23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4EBDC823FADE9100A9EC23 /* Main.storyboard */; };
 		5A4EBDCC23FADE9300A9EC23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4EBDCB23FADE9300A9EC23 /* Assets.xcassets */; };
 		5A4EBDCF23FADE9300A9EC23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4EBDCD23FADE9300A9EC23 /* LaunchScreen.storyboard */; };
+		5AF3388F240E9C590029AD9B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF3388E240E9C590029AD9B /* TableViewController.swift */; };
+		5AF33891240EA5A10029AD9B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF33890240EA5A10029AD9B /* Post.swift */; };
+		5AF33893240EAD330029AD9B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF33892240EAD330029AD9B /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		5A4EBDCB23FADE9300A9EC23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A4EBDCE23FADE9300A9EC23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A4EBDD023FADE9300A9EC23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AF3388E240E9C590029AD9B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		5AF33890240EA5A10029AD9B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		5AF33892240EAD330029AD9B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				5A4EBDD023FADE9300A9EC23 /* Info.plist */,
 				5A2DD77724056262004FB575 /* MainViewController.swift */,
 				5A2DD77924056297004FB575 /* ErrorViewController.swift */,
+				5AF3388E240E9C590029AD9B /* TableViewController.swift */,
+				5AF33890240EA5A10029AD9B /* Post.swift */,
+				5AF33892240EAD330029AD9B /* DetailViewController.swift */,
 			);
 			path = "Ulstu Course";
 			sourceTree = "<group>";
@@ -144,7 +153,10 @@
 				5A2DD77824056262004FB575 /* MainViewController.swift in Sources */,
 				5A2DD77A24056297004FB575 /* ErrorViewController.swift in Sources */,
 				5A4EBDC723FADE9100A9EC23 /* ViewController.swift in Sources */,
+				5AF33891240EA5A10029AD9B /* Post.swift in Sources */,
+				5AF3388F240E9C590029AD9B /* TableViewController.swift in Sources */,
 				5A4EBDC323FADE9100A9EC23 /* AppDelegate.swift in Sources */,
+				5AF33893240EAD330029AD9B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
