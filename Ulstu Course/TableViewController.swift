@@ -7,32 +7,43 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TableViewController: UITableViewController {
     
+    var realm: Realm { return try! Realm() }
     var posts = Array<Post>()
-
+    var selectedPostId: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            let jsonValues = try! JSONSerialization.jsonObject(with: data!) as! Array<Any>
-            self.posts = self.mapping(jsonValues: jsonValues)
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+        self.posts = Array(self.realm.objects(Post.self))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        posts = Array(realm.objects(Post.self))
+        tableView.reloadData()
+    }
+    
+    func addToRealm(postsArr: [Post]) {
+        do {
+            try realm.write {
+                realm.add(postsArr, update: .modified)
             }
-            
+        } catch {
+            print(error)
         }
-        task.resume()
     }
     
     func mapping(jsonValues: Array<Any>) -> [Post] {
         var resultArray = Array<Post>()
         
-        for element in jsonValues {
-            let post = Post(json: element as! Dictionary<String, Any>)
+        let firstFiveObjects = jsonValues.prefix(5)
+        
+        for element in firstFiveObjects {
+            let post = Post()
+            post.decode(from: element as! Dictionary<String, Any>)
             resultArray.append(post)
         }
         
@@ -41,6 +52,11 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedPostId = posts[indexPath.row].id
+        performSegue(withIdentifier: "GoToDetail", sender: self)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
@@ -56,7 +72,7 @@ class TableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DetailViewController {
-            vc.post = posts[tableView.indexPathForSelectedRow!.row]
+            vc.postId = selectedPostId
         }
     }
 }

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39EDCCC5AF84F4E79B39D2BE /* Pods_Ulstu_Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C58DF49A6A3041264E4FFA /* Pods_Ulstu_Course.framework */; };
 		5A2DD77824056262004FB575 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DD77724056262004FB575 /* MainViewController.swift */; };
 		5A2DD77A24056297004FB575 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DD77924056297004FB575 /* ErrorViewController.swift */; };
 		5A4EBDC323FADE9100A9EC23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4EBDC223FADE9100A9EC23 /* AppDelegate.swift */; };
@@ -32,6 +33,9 @@
 		5AF3388E240E9C590029AD9B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		5AF33890240EA5A10029AD9B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5AF33892240EAD330029AD9B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5F68B8C246A51E8370DE1803 /* Pods-Ulstu Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ulstu Course.release.xcconfig"; path = "Target Support Files/Pods-Ulstu Course/Pods-Ulstu Course.release.xcconfig"; sourceTree = "<group>"; };
+		C03DD1AC3334E66A3E025D76 /* Pods-Ulstu Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ulstu Course.debug.xcconfig"; path = "Target Support Files/Pods-Ulstu Course/Pods-Ulstu Course.debug.xcconfig"; sourceTree = "<group>"; };
+		F4C58DF49A6A3041264E4FFA /* Pods_Ulstu_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ulstu_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39EDCCC5AF84F4E79B39D2BE /* Pods_Ulstu_Course.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,8 @@
 			children = (
 				5A4EBDC123FADE9000A9EC23 /* Ulstu Course */,
 				5A4EBDC023FADE9000A9EC23 /* Products */,
+				854473A724435878369EDDF3 /* Pods */,
+				6AD8EE71C39805904F85F94D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			path = "Ulstu Course";
 			sourceTree = "<group>";
 		};
+		6AD8EE71C39805904F85F94D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4C58DF49A6A3041264E4FFA /* Pods_Ulstu_Course.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		854473A724435878369EDDF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C03DD1AC3334E66A3E025D76 /* Pods-Ulstu Course.debug.xcconfig */,
+				5F68B8C246A51E8370DE1803 /* Pods-Ulstu Course.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A4EBDD323FADE9300A9EC23 /* Build configuration list for PBXNativeTarget "Ulstu Course" */;
 			buildPhases = (
+				FD4C710A94BA6D6F5608F4D8 /* [CP] Check Pods Manifest.lock */,
 				5A4EBDBB23FADE9000A9EC23 /* Sources */,
 				5A4EBDBC23FADE9000A9EC23 /* Frameworks */,
 				5A4EBDBD23FADE9000A9EC23 /* Resources */,
+				E03DB77A5CDDDC272B6BA9AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,6 +170,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E03DB77A5CDDDC272B6BA9AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ulstu Course/Pods-Ulstu Course-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ulstu Course/Pods-Ulstu Course-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ulstu Course/Pods-Ulstu Course-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4C710A94BA6D6F5608F4D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ulstu Course-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A4EBDBB23FADE9000A9EC23 /* Sources */ = {
@@ -232,7 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -286,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -298,6 +366,7 @@
 		};
 		5A4EBDD423FADE9300A9EC23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C03DD1AC3334E66A3E025D76 /* Pods-Ulstu Course.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +385,7 @@
 		};
 		5A4EBDD523FADE9300A9EC23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F68B8C246A51E8370DE1803 /* Pods-Ulstu Course.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

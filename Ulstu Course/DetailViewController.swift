@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DetailViewController: UIViewController {
     
-    var post: Post?
+    var postId: Int?
+    var realm: Realm { return try! Realm() }
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var bodyTextView: UITextView!
@@ -18,31 +20,21 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let post = realm.object(ofType: Post.self, forPrimaryKey: postId)
+        
         titleTextField.text = post?.title
         bodyTextView.text = post?.body
     }
     
     @IBAction func buttonTap(_ sender: Any) {
-        //на практике забыли применить изменение из текстовых полей
-        //для этого еще надо поменять объявление свойств title и body в
-        //классе Post с let на var
-        post?.title = titleTextField.text!
-        post?.body = bodyTextView.text!
-        
-        let url = URL(string: "https://jsonplaceholder.typicode.com/posts/\(post!.id)")
-        
-        var request = URLRequest(url: url!)
-        request.httpMethod = "PUT"
-        request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
-        
-        let httpBody = try! JSONSerialization.data(withJSONObject: post!.toJson())
-        request.httpBody = httpBody
-        
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            print(error)
-            print(String(data: data!, encoding: .utf8)!)
+        guard let post = realm.object(ofType: Post.self, forPrimaryKey: postId) else {
+            return
         }
-        task.resume()
+        
+        try! realm.write {
+            realm.delete(post)
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
 }

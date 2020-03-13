@@ -7,18 +7,24 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Post {
-    let id: Int
-    let userId: Int
-    var title: String
-    var body: String
+class Post: Object {
     
-    init(json: Dictionary<String, Any>) {
-        id = json["id"] as! Int
-        userId = json["userId"] as! Int
-        title = json["title"] as! String
-        body = json["body"] as! String
+    @objc dynamic var id: Int = 0
+    @objc dynamic var userId: Int = 0
+    @objc dynamic var title: String = ""
+    @objc dynamic var body: String = ""
+    
+    override class func primaryKey() -> String? {
+        return "id"
+    }
+    
+    func decode(from dictionary: Dictionary<String, Any>) {
+        id = dictionary["id"] as! Int
+        userId = dictionary["userId"] as! Int
+        title = dictionary["title"] as! String
+        body = dictionary["body"] as! String
     }
     
     func toJson() -> Dictionary<String, Any> {
